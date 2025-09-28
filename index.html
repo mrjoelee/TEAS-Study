@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TEAS Flashcards</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>TEAS Vocabulary Flashcards</h1>
+    <div class="controls">
+      <input type="text" id="manualInput" placeholder="Enter words separated by commas">
+      <button id="addWords">Add Words</button>
+      <input type="file" id="uploadFile" accept=".json,.csv">
+      <button id="toggleTheme">Toggle Theme</button>
+      <button id="startTest">Start Random Test</button>
+      <button id="stopTest">Stop Test</button>
+    </div>
+  </header>
+
+  <main>
+    <div class="card" id="card">
+      <div class="front">
+        <div id="word" class="word"></div>
+        <div id="definition" class="def"></div>
+        <div id="example" class="example"></div>
+      </div>
+      <div class="back">
+        <div id="korean" class="ko"></div>
+      </div>
+    </div>
+
+    <div class="buttons">
+      <button id="prev">Prev</button>
+      <button id="randomWord">Random</button>
+      <button id="next">Next</button>
+      <button id="flip">Flip</button>
+      <button id="saveWord">Save</button>
+    </div>
+
+    <section id="favorites">
+      <h3>Favorites</h3>
+      <div id="favList">(none)</div>
+      <button id="clearSaved">Clear All</button>
+    </section>
+
+    <section id="testArea" class="hidden">
+      <h3>Random Test</h3>
+      <div id="testQuestion"></div>
+      <input type="text" id="testAnswer" placeholder="Type the definition">
+      <button id="submitAnswer">Submit</button>
+      <div id="testFeedback"></div>
+      <button id="nextQuestion">Next</button>
+    </section>
+  </main>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
