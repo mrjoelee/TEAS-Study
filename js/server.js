@@ -7,7 +7,7 @@ app.use(cors());
 app.use(express.json());
 
 // RapidAPI key (keep this secret!)
-const RAPIDAPI_KEY = "2ea21840dbmshbc03e035ea5c93ap1df4bejsn89317349cd63"; // replace with your RapidAPI key
+const RAPIDAPI_KEY = "your-api"; // replace with your RapidAPI key
 
 app.post("/generate-example", async (req, res) => {
   const { word } = req.body;
